@@ -14,7 +14,7 @@ import {query} from './index.js'
 
 query({a: 5, b: 'dog'})                     //a=5&b=dog
 query('a=5&b=dog')                          //{a: '5', b: 'dog'}
-query({a: 5, b: 'dog'}, {b: 'cat'})         //{a: 5, b: cat}
+query({a: 5, b: 'dog'}, {b: 'cat'})         //{a: 5, b: 'cat'}
 query({a: 5, b: 'dog'}, 'a=7&c=x')          //{a: 7, b: 'dog', c: 'x'}
 query({a: 5, b: 'dog'}, {b: null})          //{a: 5}
 query('a=5&b=dog', {b: 'cat'})              //a=5&b=cat
