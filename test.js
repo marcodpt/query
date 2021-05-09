@@ -378,7 +378,7 @@ QUnit.test("docs", function (assert) {
   assert.equal(str(query('a=5&b=dog')), str({a: '5', b: 'dog'}))
   assert.equal(str(query({a: 5, b: 'dog'}, {b: 'cat'})), str({a: 5, b: 'cat'}))
   assert.equal(str(query({a: 5, b: 'dog'}, 'a=7&c=x')), str({
-    a: 7,
+    a: '7',
     b: 'dog',
     c: 'x'
   }))
