@@ -1,11 +1,11 @@
 const getQuery = query => {
   const assign = (X, Path, value) => {
     var path = Path.shift()
-    const isArr = X[path] instanceof Array
     var toArr = path.substr(-2) == '[]'
     if (toArr) {
       path = path.substr(0, path.length - 2)
     }
+    const isArr = X[path] instanceof Array
     toArr = toArr || (X[path] != null && !(
       Path.length && typeof X[path] == 'object'
     ))

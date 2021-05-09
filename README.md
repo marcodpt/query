@@ -10,7 +10,7 @@ string in object, make merges and projections.
 
 ## Usage
 ```js
-import {query} from './index.js'
+import {query} from 'https://cdn.jsdelivr.net/gh/marcodpt/query/index.js'
 
 query({a: 5, b: 'dog'})                     //a=5&b=dog
 query('a=5&b=dog')                          //{a: '5', b: 'dog'}
@@ -42,21 +42,25 @@ query({
 }) //a.b.c=ball&a.b.d%5B%5D=john&a.b.d%5B%5D=mary
 
 query('a.b.c=ball&a.b.d[]=john&a.b.d%5B%5D=mary')
-/*
-{
-  a: {
-    b: {
-      c: 'ball',
-      d: ['john', 'mary']
-    }
-  }
-}
-*/
+//{
+//  a: {
+//    b: {
+//      c: 'ball',
+//      d: ['john', 'mary']
+//    }
+//  }
+//}
 ```
 
 ## Tests
 Check if work in your [broser](https://marcodpt.github.io/query/)
 
+Or do locally something like
+
+```
+python3 -m http.server 9000
+```
+
 ## Contributing
 Yes please! It is a very simple project with a single file, no guidelines, any
-contribution is greatly appreciate!
+contribution is greatly appreciated!
