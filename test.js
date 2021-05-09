@@ -1,4 +1,4 @@
-import {query} from 'https://github.com/marcodpt/query/index.js'
+import {query} from 'https://raw.githubusercontent.com/marcodpt/query/main/index.js'
 
 const str = function (X) {
   return JSON.stringify(X, undefined, 2)

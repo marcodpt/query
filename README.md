@@ -10,7 +10,7 @@ string in object, make merges and projections.
 
 ## Usage
 ```js
-import {query} from 'https://github.com/marcodpt/query/index.js'
+import {query} from 'https://raw.githubusercontent.com/marcodpt/query/main/index.js'
 
 query({a: 5, b: 'dog'})                     //a=5&b=dog
 query('a=5&b=dog')                          //{a: '5', b: 'dog'}
