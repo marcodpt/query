@@ -52,6 +52,11 @@ query('a.b.c=ball&a.b.d[]=john&a.b.d%5B%5D=mary')
   }
 }
 */
-
-
 ```
+
+## Tests
+Check if work in your [broser](https://marcodpt.github.io/query/)
+
+## Contributing
+Yes please! It is a very simple project with a single file, no guidelines, any
+contribution is greatly appreciate!
