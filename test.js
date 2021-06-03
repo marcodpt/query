@@ -1,4 +1,4 @@
-import {query} from 'https://cdn.jsdelivr.net/gh/marcodpt/query/index.js'
+import {query} from './index.js'
 
 const str = function (X) {
   return JSON.stringify(X, undefined, 2)
@@ -242,15 +242,13 @@ QUnit.test("merge", function (assert) {
   }))
   assert.equal(str(query(Data, {a: {b: 'x', d: ['dog', 'car']}}, {
     a: {
-      d: {
-        0: null
-      }
+      d: ['car']
     }
   })), str({
     a: {
       b: 'x',
       c: '3.14',
-      d: {1: 'car'}
+      d: ['car']
     }
   }))
 })
