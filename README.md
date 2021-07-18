@@ -1,6 +1,8 @@
 # Query js
 An es6 module javascript query string parser and builder
 
+[Tests](https://marcodpt.github.io/query/)
+
 ## Motivation
 I needed an es6 module query string parser, but it need to be very simple and
 powerful.
@@ -10,7 +12,7 @@ string in object, make merges and projections.
 
 ## Usage
 ```js
-import {query} from 'https://cdn.jsdelivr.net/gh/marcodpt/query/index.js'
+import query from 'https://cdn.jsdelivr.net/gh/marcodpt/query/index.js'
 
 query({a: 5, b: 'dog'})                     //a=5&b=dog
 query('a=5&b=dog')                          //{a: '5', b: 'dog'}
@@ -50,15 +52,6 @@ query('a.b.c=ball&a.b.d[]=john&a.b.d%5B%5D=mary')
 //    }
 //  }
 //}
-```
-
-## Tests
-Check if work in your [broser](https://marcodpt.github.io/query/)
-
-Or do locally something like
-
-```
-python3 -m http.server 9000
 ```
 
 ## Contributing

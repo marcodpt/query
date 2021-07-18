@@ -1,10 +1,10 @@
-import {query} from 'https://cdn.jsdelivr.net/gh/marcodpt/query/index.js'
+import query from './index.js'
 
-const str = function (X) {
+const str = X => {
   return JSON.stringify(X, undefined, 2)
 }
 
-QUnit.test("extreme cases", function (assert) {
+QUnit.test("extreme cases", assert => {
   assert.equal(str(query('')), str({}))
   assert.equal(str(query('a')), str({}))
   assert.equal(str(query(false)), str({}))
@@ -17,7 +17,7 @@ QUnit.test("extreme cases", function (assert) {
   assert.equal(query([]), '')
 })
 
-QUnit.test("get", function (assert) {
+QUnit.test("get", assert => {
   assert.equal(str(query('a=3')), str({a: '3'}))
   assert.equal(str(query('a=false')), str({a: 'false'}))
   assert.equal(str(query('a=')), str({a: ''}))
@@ -80,7 +80,7 @@ QUnit.test("get", function (assert) {
   }))
 })
 
-QUnit.test("set", function (assert) {
+QUnit.test("set", assert => {
   assert.equal(query({
     a: undefined,
     b: null,
@@ -190,7 +190,7 @@ QUnit.test("set", function (assert) {
   ].join('&'))
 })
 
-QUnit.test("merge", function (assert) {
+QUnit.test("merge", assert => {
   assert.equal(query('a=3', 'b=5'), 'a=3&b=5')
   assert.equal(str(query(query('a=3', 'b=5'))), str({
     a: '3',
@@ -255,7 +255,7 @@ QUnit.test("merge", function (assert) {
   }))
 })
 
-QUnit.test("project", function (assert) {
+QUnit.test("project", assert => {
   assert.equal(str(query({a: 3, b: 5}, ['a'])), str({a: 3}))
   assert.equal(str(query({a: 3, b: 5}, ['a', 'b'])), str({a: 3, b: 5}))
   assert.equal(str(query({a: 3, b: 5}, ['a', 'c'])), str({a: 3}))
@@ -373,7 +373,7 @@ QUnit.test("project", function (assert) {
   }))
 })
 
-QUnit.test("docs", function (assert) {
+QUnit.test("docs", assert => {
   assert.equal(query({a: 5, b: 'dog'}), 'a=5&b=dog')
   assert.equal(str(query('a=5&b=dog')), str({a: '5', b: 'dog'}))
   assert.equal(str(query({a: 5, b: 'dog'}, {b: 'cat'})), str({a: 5, b: 'cat'}))

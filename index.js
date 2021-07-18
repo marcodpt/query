@@ -122,7 +122,7 @@ const project = (A, Paths) => {
   }, {})
 }
 
-export const query = function () {
+export default function () {
   const B = arguments[0]
   const isObj = typeof B == 'object' || B == null
   const load = X => {
