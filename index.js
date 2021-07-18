@@ -63,13 +63,12 @@ const setQuery = (Q, path) => {
 
 const merge = (A, B) => {
   return Object.keys(B).reduce((R, key) => {
-    const isObj = (X) => X != null &&
-      typeof X == 'object' &&
-      !(X instanceof Array) 
-
     if (B[key] == null) {
       delete R[key]
-    } else if (!isObj(R[key]) || !isObj(B[key])) {
+    } else if (R[key] == null ||
+      typeof R[key] != 'object' ||
+      typeof B[key] != 'object'
+    ) {
       R[key] = B[key]
     } else {
       R[key] = merge(R[key], B[key])

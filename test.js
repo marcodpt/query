@@ -242,13 +242,15 @@ QUnit.test("merge", assert => {
   }))
   assert.equal(str(query(Data, {a: {b: 'x', d: ['dog', 'car']}}, {
     a: {
-      d: ['car']
+      d: {
+        0: null
+      }
     }
   })), str({
     a: {
       b: 'x',
       c: '3.14',
-      d: ['car']
+      d: {1: 'car'}
     }
   }))
 })
