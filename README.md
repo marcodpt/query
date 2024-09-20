@@ -1,3 +1,8 @@
+# [DEPRECATED]
+This repository contains interesting ideas but has been replaced by [wand](https://github.com/marcodpt/wand), a project that carries the good ideas here.
+
+If it is useful to you, fork it and continue development, it is kept here while I have software that depends on this repository.
+
 # Query js
 An es6 module javascript query string parser and builder
 
